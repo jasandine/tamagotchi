@@ -31,6 +31,14 @@ describe("Tamagotchi") do
     end
   end
 
+  describe('#add_food') do
+    it('allows you to feed the Tamagotchi') do
+      my_pet = Tamagotchi.new("Digital Friend")
+      my_pet.add_food()
+      expect(my_pet.food_level()).to(eq(11))
+    end
+  end
+
   describe("#is_alive?") do
     it("is alive if the food level is above 0") do
       my_pet = Tamagotchi.new("Digital Friend")
